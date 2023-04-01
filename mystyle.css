@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Heebo:wght@400;500;600&display=swap');
+
+
+*{
+	
+	 font-family:'Fredoka', 'Heebo', sans-serif;
+}
+
+body
+{
+	
+	background-image: url("images.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
+
+p{
+	text-align: center;
+	color: red;
+}
+h1{
+	font-size: 50px;
+}
+a:hover{
+	color: red;
+}
+table,th,td{
+
+border:2px solid green ;
+}
+ul{
+	list-style: square;
+}

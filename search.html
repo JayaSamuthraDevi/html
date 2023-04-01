@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>title</title>
+</head>
+<body>
+
+<div style="text-align: center;"> 
+<h1>
+	{{title}}!
+
+</h1>
+<form id="gSearch" method="GET" #gSearch action="https://www.google.com/search">
+	<input type="search" name="h" id="H">
+	<span class="fa fa search"></span>
+	<div id="voicesearch">
+		<input #searchKey type="hidden" name="q">
+		<div (click)='voiceSearch' id="icon-mic">
+			
+		</div>
+	</div>
+</form>
+</body>
+</html>

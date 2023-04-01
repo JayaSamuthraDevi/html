@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+/* to set position at center */
+.checkbox{
+    display:flex;
+    align-items: center;
+}
+/**/
+
+.checkbox label{
+    cursor: pointer;
+    display: flex;  /* adjust with page and display*/
+}
+
+/* */
+.checkbox input[type='checkbox']{
+    cursor: pointer;
+    opacity: 0;/*to disable  checkbox visibility  */
+    position:absolute;/*set the position perfect to page  */
+}
+
+/* new checkbox element using before */
+.checkbox label::before{
+    content: '';
+    width: 1em;/* em helps to adjust size of box with font */
+    height: 1em;
+    border-radius:.15em ;
+    margin-right: .5em;   /* gap b/w checkbox and label */
+    border: .15em solid black;  /* thickness,box type, color of box */
+}
+
+
+.checkbox label:hover::before,
+.checkbox input[type="checkbox"]:hover + label::before
+/* connecting box and  label 
+when checkbox hover connect next child label
+checkbox label:hover::before--> border of checkbox 
+.checkbox input[type="checkbox"]-->small checkbox element and checkbox inside area  
+  + selects the very next item*/
+{
+    background-color: rgb(161, 190, 190);
+}
+
+
+/* make checkbox focus while using tab button */
+.checkbox input[type='checkbox']:focus + label::before{
+      
+   box-shadow: 0 0 30px black;  /* x axis,y axis , amount of shadow (increase number decrease shadow thickness , color of shadow */
+}
+
+
+.checkbox input[type="checkbox"]:checked + label::before
+/* inside checkbox when input element checked and next child label before element*/
+{
+    content: '\002714';   /* standard checkmark symbol for checkbox  */
+    background-color:#93db93;
+    /* to set checkmark icon at crct position  and color of icon*/
+    display: flex;
+    justify-content: center;/* horizontal alginment */
+    align-items: center;/* vertical alignment */
+    color: black;
+}
+

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Heebo:wght@400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Fredoka', 'Heebo', sans-serif; /* can have more types if one doesn't work it goes for next*/
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#f1f4f9,#dff1ff);
+}
+section .color{
+    position:absolute;
+    filter: blur(150px);
+
+}
+section .color:nth-child(1){
+    top:-350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+
+}
+section .color:nth-child(2){
+    bottom:-200px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+
+}
+section .color:nth-child(3){
+    bottom: -30px;
+    right:160px;
+    width: 300px;
+    height:300px;
+    background: #00d2ff;
+
+}
+.box{
+
+    position:relative;
+}
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;/* property name, duration of transformation, way of transform,how many times to do*/
+    animation-delay: calc(-1s*var(--i));
+}
+@keyframes animate
+{
+    0%,100%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(48px);
+    }
+}
+/*
+transform: translateX(100%); --direction of transformation
+transform:   ===
+ just transform element but
+ there can't give any smooth or any form of animation
+
+ to give different animation 
+
+animation can be done by 
+transition: === for simple
+animation:  === for complex animation  
+
+transtion: 
+
+(   propertyname        =(specify what property to taken)default inculdes all property 
+    , (duration)        =time taken for complete transition , 
+    timing function     =(eg linear,ease-in-out(starts and end slowly),ease-in(starts slow)-can take exact by inspect page and copy that code changed),
+    specify delay       = wait to start transform
+)
+
+animation:
+
+(   name(eg: left to right ) = combines keyframes 
+    ,duration
+    ,timing function
+    ,property name: animation-fill-mode:(eg:forward,backward)
+    ,how many times to repeat (eg:3, inifinite )
+    ,direction  (eg: alternate)
+    ,delay time
+)
+@keyframe name(left to right){
+
+ to set transformation  b/w 0% to 100%values
+ at 100%specify by
+ 0%{ 
+    transform:translateX(100%);
+
+}
+33%{
+transform:translateY(100%);
+}
+66%{
+    transform:translateX(100%) translateY(100%);
+}
+ 100%{
+     transform:translateY(100%);
+
+}
+
+*/
+.box .square:nth-child(1){
+top: -50px;
+right: -60px;
+width: 100px;
+height: 100px;
+}
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    }
+    .box .square:nth-child(3){
+        bottom: 50px;
+        right: -60px;
+        width: 80px;
+        height: 80px;
+        z-index: 2;
+        }
+        .box .square:nth-child(4){
+            top: -80px;
+            left: 100px;
+            width: 50px;
+            height: 50px;
+            }
+            .box .square:nth-child(5){
+                bottom: -88px;
+                left: 140px;
+                width: 60px;
+                height: 60px;
+                }
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255,255,0.1);
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2) ; 
+
+}
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color: white ;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+.form h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+
+
+}
+.form .inputBx{
+    width: 100%;
+    margin-top: 20px;
+
+}
+.form .inputBx input{
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px ; /*height , inside box text gap with box */
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2) ; 
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #383838;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+}
+.form .inputBx input::placeholder{
+    color:gray;
+
+}
+.form .inputBx input[type="submit"]{
+    background: #fff;
+    color: rgb(59, 59, 59);
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+
+}
+.form .inputBx input[type="submit"]:hover{
+
+  height:50px;
+
+  
+}
+.forget{
+    
+    margin-top: 10px;
+    color:#939694 ;
+}
+.forget a{
+    padding-left: 5px;
+    color:#939694;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.forget a:hover{
+    color: black;
+}
+.remember{
+   
+  
+    color: #5f6160;
+    font-size: 18px;
+    
+}

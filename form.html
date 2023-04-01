@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	
+	<form action="www.google.com"><!-- <form action="www.wee.php"> here action attribute is to perform action after the form is submitted -->
+
+		<!-- for keyword in label and id keyword in input is to connect input with label to place the carot to type input-->
+
+		<label for="first_name">
+			First Name:
+		</label>
+
+		<input type="text" id="first_name" name="first_name" placeholder="Spongebob">
+		<br>
+		<br>
+		<label for="last_name">Last Name:</label>
+		<intput type="text" id="last_name" name="last_name" placeholder="squarepants">
+
+		<br>
+		<br>
+		<label for="title">Title:</label>
+		<label for="Mr.">Mr.</label>
+		<input type="radio" value="Mr." id="Mr." name="title">
+		<label for="Mrs.">Mrs.</label>
+		<input type="radio" value="Mrs." id="Mrs." name="title">
+		<label for="Miss.">Miss.</label>
+		<input type="radio" value="Miss." id="Miss." name="title">
+		<br><br>
+
+		<label for="payment">Payment:</label>
+		<select id="payment" name="payment">
+			<option value="visa" >visa	</option>
+			<option value="debitcard">debitcard	</option>
+			<option value="mastercard">mastercard	</option>
+			<option value="giftcard">giftcard	</option>
+		</select>
+		<br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="ss.@gmail.com">
+		<br><br>
+
+		<label for="birthday">Birthday:</label>
+		<input type="date" id="brthday" name="birthday" min="2000-01-01">
+		<br><br>
+
+		<!-- we can limit the values using keywords min & max-->
+
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity"  name="quantity" min="0" max="100">
+		<br><br>
+
+		<label for="phone">Phone #:</label>
+		<input type="tel" id="phone" name="phone">
+		<br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" maxlength="12">
+		max 12 characters
+		<!--limit no.of passwords by maxlenght keyword -->
+		<br><br>
+
+		<label for="slider">Rate us:</label>
+		 1<input type="range" step="25" name="slider" value="100">5<!-- set default value 100 to slider -->
+		<br><br>
+		<label for="subscribe">Subscribe:</label>
+		<input type="checkbox" id="subscribe" name="subscribe">
+		<br><br>
+		<label for="myfile">upload a file:</label>
+		<input type="file" id="myfile" name="myfile" accept=".txt"><!-- accept keyword is to say what type file is accepted -->
+		<br><br>
+		<input type="reset" >
+		<br><br>
+		<input type="submit" >
+
+	</form>
+</body>
+</html>
